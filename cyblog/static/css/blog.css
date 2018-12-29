@@ -1,0 +1,191 @@
+body{
+  padding:0;
+  width: 100%;
+  height:100%;
+  background-color: #f9f9f9;
+  background-size: cover;
+}
+
+.header{
+  position: fixed;
+  z-index: 1;
+  top:0;
+  left:0;
+  right:0;
+  bottom: 20px;
+background-color: #09baa5;
+display: inline-block;
+width:100%;
+height:50px;
+border-radius:2px;
+}
+label.logo{
+  font-family: Quicksand;
+  color:#fff;
+
+  font-size: 23px;
+  margin:6 0 0 54;
+  font-weight:bold;
+}
+label.logo a {
+  text-decoration: none;
+  color:#fff;
+}
+img.logo{
+  width:100px;
+  height:90px;
+  border-radius:50%;
+  margin:0 9px 0 -25px;
+  padding: 0;
+}
+
+p{
+  font-family:Quicksand;
+
+}
+
+label.logout{
+padding:12px;
+font-family:Open_Sans;
+background:#09baa5;
+display: block;
+}
+.logout a{
+  
+  text-decoration:none;
+  color:#e2e2e2;
+}
+p.variable{
+  color:#b4b9c1;
+  font-weight: bold;
+}
+.create a{
+  font-size: 16px;
+  font-family: Quicksand;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #fff;
+  padding:2px;
+}
+.create{
+  float:right;
+  margin:14 89 0 0;
+
+}
+
+div.container{
+
+  position: relative;
+  top:0;
+  height:100%;
+  margin-top:70;
+}
+
+
+.profile{
+
+  display: block;
+border:1px solid #ccc;
+border-left:none;
+border-top:none;
+border-right: 1px solid #ccc;
+width: 300px;
+height: auto;
+padding:10px;
+border-radius:6px;
+background: white;
+margin: 0 12 0 0;
+}
+div.profile_header{
+display:flex;
+margin:25px 0px;
+padding:0;
+}
+.profile_header ul {
+  list-style-type: none;
+  list-style-image: none;
+  list-style: none;
+  padding:0;
+  margin:0 18 0 0;
+
+}
+.profile_header ul li{
+  margin:0px 0px;
+  font-size: 14px;
+  font-family: Quicksand;
+
+}
+.profile_header button{
+  width: 90px;
+  height: 40px;
+  margin-left:10px;
+}
+.post_header{
+  display: flex;
+  margin:0 0 12px 0;
+}
+ul.header_title{
+display: block;
+list-style: none;
+list-style-type: none;
+list-style-image: none;
+
+}
+ul.header_title li.date{
+  color:#b4b9c1;
+
+}
+
+.post_logo{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+
+}
+div.post{
+margin: 10px 0 40px 0;
+}
+
+
+
+article{
+  font-family:Quicksand;
+}
+form.logform{
+  margin:100 auto;
+  width: 650px;
+  height:100%;
+  font-family:Arvo;
+}
+.form-input{
+  display:block;
+  width: 550px;
+  height:40px;
+  border:1px solid #e2e2e2;
+  border-radius:6px;
+  margin:10px 0 10px 0;
+    padding:6px;
+}
+.form-text{
+  margin:10px 0 10px 0;
+  display:block;
+  width: 550px;
+  border-style: none;
+  border:1px solid #e2e2e2;
+  border-radius:6px;
+  padding:6px;
+  height: 150px;
+
+}
+.subbtn{
+  border-style:none;
+  font-family: Quicksand;
+  font-size:18px;
+  width:100px;
+  height:50px;
+  background: #09baa5;
+  border-radius:6px;
+  margin:20px 0 20px 0;
+  color:#fff;
+  display: block;
+}

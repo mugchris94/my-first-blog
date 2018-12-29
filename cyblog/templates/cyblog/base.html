@@ -1,0 +1,29 @@
+{% load static from staticfiles %}
+<html>
+<head>
+<title>
+{% block title %}
+Mob-hub
+{% endblock %}
+</title>
+
+<link rel="stylesheet" href="{% static 'css/blog.css' %}"/>
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"/>
+<link rel="stylesheet" href="{% static 'css/log.css' %}"/>
+</head>
+
+<body>
+<div class="header">
+<label for="logo" class="logo"><a href="#">mobhub</a></label>
+<label class="create" ><a href="{% url 'create_user' %}">Create your profile</a></label>
+
+</div>
+{% block content %}
+{% endblock %}
+</body>
+<footer></footer>
+<script src="{% static 'js/jquery-3.3.1.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+{% block javascript %}
+{% endblock %}
+</html>

@@ -1,0 +1,13 @@
+{% extends "cyblog/base.html" %}
+{% load static from staticfiles %}
+{% block content %}
+<div class="log_container">
+  <img class='mylogo' src=" {% static 'cologo.png' %} "/>
+  <form class="form-group" action="" method="post">
+  {% csrf_token %}
+
+    {{ form.as_p }}
+    <button type="submit" name="submit" class="btn btn-primary btn-block">create</button>
+  </form>
+</div>
+{% endblock %}

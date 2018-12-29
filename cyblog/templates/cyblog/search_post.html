@@ -1,0 +1,61 @@
+
+{% extends "cyblog/base.html" %}
+{% load static from staticfiles %}
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+  <div class="profile">
+    <div class="profile_header">
+      <img  class="logo" src="{% static 'profile.png' %}"/>
+      <ul>
+        <li>your_name</li>
+        <li>friends</li>
+      </ul>
+      <button type="button" class="btn btn-primary">follow</button>
+    </div>
+    <p class= "variable">company</p>
+    <p class="name">A&T communication ltd</p>
+        <p class= "variable">career</p>
+    <p class="work">software programmer</p>
+        <p class= "variable">bio</p>
+    <article>The aim of this example is to show how to create a navbar using Bootstrap. Bootstrap is the world’s most famous front-end
+  framework. Navbars are responsive meta components that serve as navigation headers for your application or site. They begin
+  collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.
+  </article>
+</div>
+</div>
+<div class="col-md-6">
+
+  <label>{{ view_date }}</label>
+  </br>
+  <form class="form-inline"  method="POST" role="search" action="{% url 'search_post' %}" >
+
+{{ crsf_token }}
+{{ form }}
+    <button type="button" class="btn btn-default" name="button">search</button>
+
+
+
+  </form>
+
+
+  {% if titles %}
+  {% for title in titles %}
+    <div class="post">
+      <h3>{{ title.title }}</h3>
+      <p>{{ title.created_date }}</p>
+      <p>{{ title.text }}</p>
+    </div>
+
+  {% endfor %}
+{% endif %}
+</br>
+  {% if not titles %}
+    <p>kill him now</p>
+  {% endif%}
+</div >
+</div>
+</div>
+</div>
+{% endblock %}

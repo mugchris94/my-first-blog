@@ -1,0 +1,59 @@
+
+{% extends "cyblog/base.html" %}
+{% load static from staticfiles %}
+{% block content %}
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+  <div class="profile">
+    <div class="profile_header">
+      <img  class="logo" src="{% static 'profile.png' %}"/>
+      <ul>
+        <li>your_name</li>
+        <li>friends</li>
+      </ul>
+      <button type="button" class="btn btn-primary">follow</button>
+    </div>
+    <p class= "variable">company</p>
+    <p class="name">A&T communication ltd</p>
+        <p class= "variable">career</p>
+    <p class="work">software programmer</p>
+        <p class= "variable">bio</p>
+    <article>The aim of this example is to show how to create a navbar using Bootstrap. Bootstrap is the world’s most famous front-end
+  framework. Navbars are responsive meta components that serve as navigation headers for your application or site. They begin
+  collapsed (and are toggleable) in mobile views and become horizontal as the available viewport width increases.
+  </article>
+  </div>
+</div>
+<div class="col-md-8">
+
+  <label>{{ view_date }}</label>
+  <label class='logout'><a href="{% url 'logout_view' %}">logout</a></label>
+  </br>
+  <form  class="navbar-form"  method="POST" role="search" >
+    {% csrf_token %}
+
+    {{form }}
+    <button class="btn btn-primary" name="submit">search</button>
+
+  </form>
+  {% for post in posts_to_date %}
+    <div class="post">
+      <div class="post_header">
+<img  class="post_logo" src="{% static 'user.png' %}"/>
+
+        <ul class="header_title">
+      <li>{{ post.title }}</li>
+      <li class="date">{{ post.created_date }}</li>
+    </ul>
+            </div>
+
+
+      <p>{{ post.text }}</p>
+    </div>
+  {% endfor %}
+</div >
+</div>
+</div>
+
+{% endblock %}

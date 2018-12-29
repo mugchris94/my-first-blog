@@ -1,0 +1,17 @@
+{% extends "cyblog/base.html" %}
+{% block content %}
+
+<form  method="post" class="logform">
+  {% csrf_token %}
+  {{form}}
+  <input type="submit" value="create" class="subbtn"/>
+</form>
+<section>
+{% for post in post %}
+{{ post.title}}
+{{post.title}}
+{{post.text}}
+
+{% endfor %}
+</section>
+{% endblock %}

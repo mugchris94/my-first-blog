@@ -1,0 +1,33 @@
+{% extends "cyblog/base.html" %}
+{% load static from staticfiles %}
+{% block content %}
+<div class="container">
+
+<div class="log_container">
+<div class="col-sm-14">
+    <div class="panel panel-default">
+        <div class="panel-heading">log-in</div>
+      <div class="panel-body">
+  <img class='mylogo' src=" {% static 'cologo.png' %} "/>
+
+  <form class="form-group" action="" method="post">
+  {% csrf_token %}
+  {% if form.has_errors %}
+  <label>Your username is not valid and your password isn't</label>
+  {% endif %}
+<p><label for="username">username</label>
+    {{ form.username }}</p>
+    <p><label for="password">password</label>
+    {{ form.password }}
+    </p>
+    {% if request.GET.next %}
+<input type='hiden' name='next' value="{{request.GET.next}}">
+    {% endif %}
+    <button type="submit" name="submit" class="btn btn-primary btn-block">log-in</button>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
